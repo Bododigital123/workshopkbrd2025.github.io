@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>गोजां बोथोरनि, दोरोङारि दामजु मावबादा (Cultural Workshop)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: src'C:\Users\LAPTOP\Downloads\WhatsApp Image 2024-11-20 at 09.15.34_67424e14.jpg'; /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: black;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo-left, .logo-right {
+            position: fixed;
+            top: 20px;
+            padding: 10px;
+        }
+
+        .logo-left {
+            left: 20px;
+        }
+
+        .logo-right {
+            right: 20px;
+        }
+
+        .logo-left img, .logo-right img {
+            width: 80px;
+            height: auto;
+        }
+
+        .logo-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .logo-center img {
+            width: 120px;
+            height: auto;
+        }
+
+        .note {
+            background-color: red;
+            color: white;
+            padding: 5px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 12px;
+            position: absolute;
+            top: 10px;
+            left: -100%;
+            animation: slideIn 3s forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                left: -100%;
+            }
+            to {
+                left: 0;
+            }
+        }
+
+        form {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            margin: 20px auto;
+        }
+
+        form input, form select, form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+
+        form button {
+            background-color: #f44336;
+            color: white;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #d32f2f;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 16px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #f44336;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer img {
+            width: 30px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <!-- Left and Right Logos -->
+    <div class="logo-left">
+        <img src="C:\Users\LAPTOP\Desktop\download.jpeg" alt="Left Logo">
+    </div>
+    <div class="logo-right">
+        <img src="C:\Users\LAPTOP\Desktop\logo.jpg" alt="Right Logo">
+    </div>
+
+    <!-- Sliding Note -->
+    <div class="note">
+        N.B. - Last Date of Online Registration form 7th January 2025 (8p.m)
+    </div>
+
+    <!-- Center Logo -->
+    <div class="logo-center">
+        <img src="C:\Users\LAPTOP\Desktop\download (1).jpeg" alt="Center Logo">
+    </div>
+
+    <center>
+        <h1>गोजां बोथोरनि, दोरोङारि दामजु मावबादा (Cultural Workshop)</h1>
+        <p><strong>थावनि:</strong> KBRD College, Auditorium Hall</p>
+        <p><strong>Organized by:</strong> KBR College Unit ABSU 2025</p>
+        <p><strong>खालार:</strong> 8 निफ्राय 16 जानुवारी 2025 सिम</p>
+
+        <h2>Register for Workshop</h2>
+    </center>
+
+    <form action="submit_form.php" method="POST" enctype="multipart/form-data">
+        <label for="name">1. Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="enrollment">2. Enrollment/Roll Number:</label><br>
+        <input type="text" id="enrollment" name="enrollment" required><br><br>
+
+        <label for="semester">3. Semester:</label><br>
+        <select id="semester" name="Semester" required>
+            <option value="2nd">2nd Semester</option>
+            <option value="4th">4th Semester</option>
+            <option value="6th">6th Semester</option>
+        </select><br><br>
+
+        <label for="department">4. Department:</label><br>
+        <select id="department" name="department" required>
+            <option value="Bodo">Bodo</option>
+            <option value="English">English</option>
+            <option value="Economics">Economics</option>
+            <option value="History">History</option>
+            <option value="Education">Education</option>
+            <option value="Assamese">Assamese</option>
+            <option value="Political Science">Political Science</option>
+        </select><br><br>
+
+        <label for="phone">5. Phone/WhatsApp number:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="dob">7. Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <label for="interest">8. Specify your interest:</label><br>
+        <select id="interest" name="interest" required>
+            <option value="Kham">Kham</option>
+            <option value="Serja">Serja</option>
+	    <option value="Gongona">Gongona</option>
+            <option value="Sifung">Sifung</option>
+        </select><br><br>
+
+        <label for="signature">9. Signature (Image, max 200 KB):</label><br>
+        <input type="file" id="signature" name="signature" accept="image/*" required><br><br>
+
+        <label for="photo">10. Upload Passport Size Photo (3×4, max 200 KB):</label><br>
+        <input type="file" id="photo" name="photo" accept="image/*" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Footer Section -->
+    <footer>
+	<p>Helpline number: +91 6003539633 or +91 7896826031
+        <p>Designed by: <strong>RuBuL BaSuMaTaRy</strong></p>
+        <p>Email: <a href="mailto:basumataryr064@gmail.com">basumataryr064@gmail.com</a>
+            <a href="https://facebook.com/RUBULBASUMATARY" target="_blank">
+                <img src="C:\Users\LAPTOP\Desktop\WhatsApp Image 2025-01-07 at 02.23.45_c5993467.jpg" alt="Facebook Logo"> RUBUL BASUMATARY
+            </a>
+        </p>
+    </footer>
+</body>
+</html>
